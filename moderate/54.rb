@@ -50,7 +50,6 @@ describe Converter do
   context "return 0.05" do
     it do
       converter = Converter.new(0.05)
-      binding.pry
       expect(converter.get_me_rest).to eq ['NICKEL']
     end
   end
@@ -80,14 +79,14 @@ describe Converter do
   context "return ERROR" do
     it do
       converter = Converter.new(-1)
-      expect(converter.get_me_rest).to eq 'ERROR'
+      expect(converter.get_me_rest).to eq ['ERROR']
     end
   end
 
   context "return ZERO" do
     it do
       converter = Converter.new(0)
-      expect(converter.get_me_rest).to eq 'ZERO'
+      expect(converter.get_me_rest).to eq ['ZERO']
     end
   end
 end
